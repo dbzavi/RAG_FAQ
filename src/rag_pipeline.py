@@ -96,5 +96,5 @@ def answer_query(query: str) -> str:
     except Exception as e:
         error_msg = str(e).lower()
         if "rate_limit" in error_msg or "429" in error_msg or "rate limit" in error_msg:
-            return "⚠️ Groq API rate limit reached (Max 30 requests/min or 12K tokens/min). Please wait a moment and try again."
-        return f"An error occurred while generating the answer. Please check your Groq API key or try again later. Details: {str(e)}"
+            return "⚠️ Our servers are currently experiencing high traffic. Please wait a moment and try again."
+        return "⚠️ I'm sorry, I encountered an unexpected server error while generating the answer. Please try again later."
